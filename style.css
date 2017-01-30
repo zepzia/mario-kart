@@ -1,0 +1,132 @@
+/*// BASE STYLES //*/
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 40%;
+  background: skyblue;
+}
+
+.grass{
+  height: 30%;
+  background: seagreen;
+}
+
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+/*// ELEMENTS TO ANIMATE //*/
+.mario {
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  animation: drive 3s both infinite linear,
+             jump 0.3s 1.2s ease;
+  
+}
+
+.shroom {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-height: 180px;
+  animation-name: drive-shroom;
+  animation-duration: 3.2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+
+.tree {
+  position: absolute;
+  top: -225px;
+  left: 30px;
+  max-height: 180px;
+}
+
+
+.tree-two {
+  position: absolute;
+  top: -270px;
+  left: 200px;
+  max-height: 165px;
+}
+
+.tree-three {
+  position: absolute;
+  top: -295px;
+  left: 440px;
+  max-height: 140px;
+}
+
+.tree-four {
+  position: absolute;
+  top: -260px;
+  left: 650px;
+  max-height: 175px;
+}
+
+.tree-five {
+  position: absolute;
+  top: -290px;
+  left: 850px;
+  max-height: 150px;
+}
+
+.tree-six {
+  position: absolute;
+  top: -230px;
+  left: 1050px;
+  max-height: 180px;
+}
+
+
+
+/*// KEYFRAMES //*/
+@keyframes drive {
+  from{ transform: translateX(-300px); }
+  to{ transform: translateX(1700px); }
+}
+
+@keyframes drive-shroom {
+  from{ transform: translateX(-300px); }
+  to{ transform: translateX(1700px); }
+}
+
+@keyframes jump {
+  0% {top: -40px;}
+  50% { top: -100px; }
+  100% { top: -40px; }
+}
+
+
+
+
+
+
+
